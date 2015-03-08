@@ -68,7 +68,7 @@ public class Main {
                 //補給タスク終了後に遠征が戻ってきたらやり直す.
                 for(int i=0;i<TaskQueue.queue.size();i++) if(TaskQueue.queue.get(i) instanceof Hokyu) queueExecuter(sm);
                 //遠征タスク
-                TaskQueue.queue.get(0).execute(sm);
+                if(TaskQueue.queue.size()!=0) TaskQueue.queue.get(0).execute(sm);
             }
             sm.transitionBokou(sm.getState());
         }

@@ -611,9 +611,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
-[debug] :: resolution report :: resolve 1398ms :: artifacts dl 56ms
+[debug] :: resolution report :: resolve 1987ms :: artifacts dl 37ms
 [debug] 	report for default#kankore_sbt$sbt_2.11;1.0 default produced in C:\Users\hiroto\IdeaProjects\kankore_sbt\target\resolution-cache\reports\default-kankore_sbt$sbt_2.11-default.xml
-[debug] 	resolve done (1398ms resolve - 56ms download)
+[debug] 	resolve done (1987ms resolve - 37ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#kankore_sbt$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -955,6 +955,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 470ms :: artifacts dl 78ms
+[debug] :: resolution report :: resolve 407ms :: artifacts dl 34ms
 [debug] 	report for default#kankore_sbt$sources_2.11;1.0 default produced in C:\Users\hiroto\IdeaProjects\kankore_sbt\target\resolution-cache\reports\default-kankore_sbt$sources_2.11-default.xml
-[debug] 	resolve done (470ms resolve - 78ms download)
+[debug] 	resolve done (407ms resolve - 34ms download)
