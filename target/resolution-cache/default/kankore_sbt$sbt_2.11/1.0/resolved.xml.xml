@@ -4,7 +4,7 @@
 		module="kankore_sbt$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150307191256"
+		publication="20150308114746"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

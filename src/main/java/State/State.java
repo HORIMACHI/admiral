@@ -41,13 +41,8 @@ public interface State {
                     }
                     System.out.println("補給タスク生成");
                     //ここで補給タスクと遠征タスクを生成する.
-                    TaskQueue.queue.add(new Hokyu());
-                    /* 既存の遠征タスクを全て消して後ろに追加する */
-                    for(int i=0;i < TaskQueue.queue.size();i++) {
-                        if(TaskQueue.queue.get(i) instanceof Ensei)
-                            TaskQueue.queue.remove(i);
-                    }
-                    TaskQueue.queue.add(new Ensei());
+                    TaskQueue.queue.addFirst(new Hokyu());
+                    TaskQueue.queue.addLast(new Ensei());
                 }
                 //Adjuster
                 boolean match = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
