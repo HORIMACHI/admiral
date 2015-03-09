@@ -58,9 +58,9 @@ public class ImageMatcher {
 //        //グレースケールにする
 //
 //        input = grayScale(input);
-outputImg(input,"C:\\pixel\\input.png","png");
+//outputImg(input,"C:\\pixel\\input.png","png");
 //        screen = grayScale(screen);
-outputImg(screen,"C:\\pixel\\screen.png","png");
+//outputImg(screen,"C:\\pixel\\screen.png","png");
         for(int y =0;y < screen.getHeight();y++) {
             for(int x = 0;x < screen.getWidth();x++) {
                 //左上が一致したらマッチング開始
