@@ -13,6 +13,7 @@ import java.util.Map;
 
 import static Constant.Constants.P_FILEPATH;
 import static Constant.Constants.RSRC_FILEPATH;
+import static Constant.Constants.PATH_SYMBOL;
 
 import Task.Hokyu;
 import Task.Ensei;
@@ -25,18 +26,18 @@ public interface State {
         public  default void mousePositionAdjuster(State state)  {
             //画像の一致に失敗しても問題なくさせる
             Click.getInstance().mouseMove(0,0);
-            if(state.getClass().getSimpleName().equals("Bokou")) {
-                if(!ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()))) {
+            if(state.getClass().getSimpleName().toLowerCase().equals("bokou")) {
+                if(!ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()))) {
                     System.out.println("遠征から帰ってきました");
                     Click.getInstance().mouseMove(ImageMatcher.getInstance().get_B_AdjustX(), ImageMatcher.getInstance().get_B_AdjustY());
                     Click.getInstance().mouseClick(5000);
-                    while(!ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()))) {
+                    while(!ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()))) {
                         Click.getInstance().mouseMove(ImageMatcher.getInstance().get_B_AdjustX(), ImageMatcher.getInstance().get_B_AdjustY());
                         Click.getInstance().mouseClick(200);
                         System.out.println("クリック連打");
                     }
                     /*また発見したらもう一度押し続ける*/
-                    if(!ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()))){
+                    if(!ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()))){
                         mousePositionAdjuster(state);
                     }
                     System.out.println("補給タスク生成");
@@ -45,7 +46,7 @@ public interface State {
                     TaskQueue.queue.addLast(new Ensei());
                 }
                 //Adjuster
-                boolean match = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+                boolean match = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
                 if (match) {
                     Click.getInstance().mouseMove(ImageMatcher.getInstance().get_B_AdjustX(), ImageMatcher.getInstance().get_B_AdjustY());
                     Click.getInstance().mouseClick();
@@ -53,12 +54,12 @@ public interface State {
             }
         }
         public  default boolean transitionBokou(Context context,State state)  {
-            if(state.getClass().getSimpleName().equals("Bokou")) {
+            if(state.getClass().getSimpleName().toLowerCase().equals("bokou")) {
                 mousePositionAdjuster(state);
                 return true;
             }
             System.out.println(Bokou.getInstance());
-            boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "" + "\\" + "HHKNK_common" + "\\" + "bokou" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+            boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "" + PATH_SYMBOL + "HHKNK_common" + PATH_SYMBOL + "bokou" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
             if(matcher) {
                 Click.getInstance().mouseMove(ImageMatcher.getInstance().MatchX(), ImageMatcher.getInstance().MatchY());
                 Click.getInstance().mouseClick();
@@ -72,15 +73,15 @@ public interface State {
         }
         //強制的に母港に移動させる.
         public default boolean transitionAjuster(Context context,State state) {
-            if(state.getClass().getSimpleName().equals("Bokou")) {
-                boolean match = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "kantai" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+            if(state.getClass().getSimpleName().toLowerCase().equals("bokou")) {
+                boolean match = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "kantai" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
                 if (match) {
                     Click.getInstance().mouseMove(ImageMatcher.getInstance().MatchX(), ImageMatcher.getInstance().MatchY());
                     Click.getInstance().mouseClick();
                     return true;
                 }
             } else {
-                boolean match = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "HHKNK_common" + "\\" + "bokou" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+                boolean match = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "HHKNK_common" + PATH_SYMBOL + "bokou" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
                 if (match) {
                     Click.getInstance().mouseMove(ImageMatcher.getInstance().MatchX(), ImageMatcher.getInstance().MatchY());
                     Click.getInstance().mouseClick();

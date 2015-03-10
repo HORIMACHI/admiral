@@ -51,8 +51,8 @@ public class Bokou implements State{
                 return false;
         }
 
-        System.out.println(RSRC_FILEPATH + this.getClass().getSimpleName() + "\\" + dest + ".png");
-        boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + this.getClass().getSimpleName() + "\\" + dest + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+        System.out.println(RSRC_FILEPATH + this.getClass().getSimpleName().toLowerCase() + PATH_SYMBOL + dest + ".png");
+        boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + this.getClass().getSimpleName().toLowerCase() + PATH_SYMBOL + dest + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
         if(matcher) {
             Click.getInstance().mouseMove(ImageMatcher.getInstance().MatchX(), ImageMatcher.getInstance().MatchY());
             Click.getInstance().mouseClick();

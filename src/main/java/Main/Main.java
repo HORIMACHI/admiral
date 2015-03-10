@@ -10,13 +10,13 @@ import Task.Task;
 import Task.TaskQueue;
 import Task.Ensei;
 import Controll.TimerUtil;
-
 import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 import Task.Hokyu;
 import static Constant.Constants.P_FILEPATH;
 import static Constant.Constants.RSRC_FILEPATH;
+import static Constant.Constants.PATH_SYMBOL;
 
 /**
  * Created by hiroto on 2015/02/22.
@@ -28,7 +28,7 @@ public class Main {
         //画面情報の取得
         Display.getInstance().setDesktopEnvironment();
         //編成画面がどこにあるか調べる
-        ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+        ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
         //それよりX座標が+200のところをAdjustとする
         ImageMatcher.getInstance().set_B_Adjust(ImageMatcher.getInstance().MatchX()+200,ImageMatcher.getInstance().MatchY());
     }
@@ -36,7 +36,7 @@ public class Main {
     public static void main(String[] args) {
         init();
         //編成画面がどこにあるか調べる
-        boolean hensei = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + "\\" + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+        boolean hensei = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
         System.out.println(hensei);
         StateManager sm = new StateManager();
         sm.transitionBokou(sm.getState());

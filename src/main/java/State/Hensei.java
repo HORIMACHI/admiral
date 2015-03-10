@@ -13,6 +13,7 @@ import java.util.Map;
 
 import static Constant.Constants.P_FILEPATH;
 import static Constant.Constants.RSRC_FILEPATH;
+import static Constant.Constants.PATH_SYMBOL;
 
 /**
  * Created by horiba on 2015/02/24.
@@ -54,8 +55,8 @@ public class Hensei implements State{
         }
 
         //サブメニューしか使わない
-        System.out.println(RSRC_FILEPATH + "HHKNK_common" + "\\" + dest + ".png");
-        boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "HHKNK_common" + "\\" + dest + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+        System.out.println(RSRC_FILEPATH + "HHKNK_common" + PATH_SYMBOL + dest + ".png");
+        boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "HHKNK_common" + PATH_SYMBOL + dest + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
         if(matcher) {
             Click.getInstance().mouseMove(ImageMatcher.getInstance().MatchX(), ImageMatcher.getInstance().MatchY());
             Click.getInstance().mouseClick();
