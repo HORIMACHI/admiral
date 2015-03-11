@@ -11,6 +11,7 @@ import State.Context;
 import java.awt.*;
 import java.io.File;
 
+import static Constant.Constants.PATH_SYMBOL;
 import static Constant.Constants.P_FILEPATH;
 import static Constant.Constants.RSRC_FILEPATH;
 
@@ -36,42 +37,44 @@ public class Ensei implements Task{
         context.transition(context.getState(), "syutsugeki");
         context.transition(context.getState(), "ensei");
         int[] ids = {2, 5, 6};
-        if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "id1_8" + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
-                img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "id1_8_e" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+        //鎮守府海域
+        if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "id1_8" + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
+                img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "id1_8_e" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
             clk.mouseMove(img.MatchX(), img.MatchY());
             clk.mouseClick();
             clk.mouseMove(0, 0);
             for (int i = 0; i < 3; i++) {
-                if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "eid" + String.valueOf(ids[i]) + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                //遠征のID選択
+                if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "eid" + String.valueOf(ids[i]) + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
                     clk.mouseMove(img.MatchX(), img.MatchY());
                     clk.mouseClick();
                     clk.mouseMove(0, 0);
                     //決定ボタン
-                    if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "kettei" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                    if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "kettei" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
                         clk.mouseMove(img.MatchX(), img.MatchY());
                         clk.mouseClick();
                         clk.mouseMove(0, 0);
                         //艦隊選択ボタン
-                        if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "ek" + String.valueOf(i+2) + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
-                                img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "ek" + String.valueOf(i+2) + "_e" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                        if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "ek" + String.valueOf(i+2) + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
+                                img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "ek" + String.valueOf(i+2) + "_e" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
                             clk.mouseMove(img.MatchX(), img.MatchY());
                             clk.mouseClick();
                             clk.mouseMove(0, 0);
                             //遠征開始ボタン
-                            if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "e_start" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                            if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "e_start" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
                                 clk.mouseMove(img.MatchX(), img.MatchY());
                                 clk.mouseClick();
                                 clk.mouseMove(0, 0);
                                 TimerUtil.getInstance().sleep(5000);//成功したら5秒待つ
                                 //サブメニュー閉じさせる
-                                if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "e_cancel" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                                if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "e_cancel" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
                                     clk.mouseMove(img.MatchX(), img.MatchY());
                                     clk.mouseClick();
                                     clk.mouseMove(0, 0);
                                 }
                             }
                             //見つからなかったらキャンセル
-                            else if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + "\\" + "e_cancel" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                            else if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "e_cancel" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
                                 clk.mouseMove(img.MatchX(), img.MatchY());
                                 clk.mouseClick();
                                 clk.mouseMove(0, 0);

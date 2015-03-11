@@ -62,6 +62,7 @@ public class Kaiso implements State{
             mousePositionAdjuster(context.getState());
             return true;
         }else {
+            this.transition(context,state,dest);
             System.out.println("sippai");
             return false;
         }

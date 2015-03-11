@@ -14,6 +14,7 @@ import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 import Task.Hokyu;
+import static Constant.Constants.ONE_MINUTES;
 import static Constant.Constants.P_FILEPATH;
 import static Constant.Constants.RSRC_FILEPATH;
 import static Constant.Constants.PATH_SYMBOL;
@@ -52,7 +53,7 @@ public class Main {
             }
             //taskの実行
             queueExecuter(sm);
-            TimerUtil.getInstance().sleep(Constants.ONE_MINUTES);//1分
+            TimerUtil.getInstance().sleep(ONE_MINUTES);//1分
         }
     }
     static void queueExecuter(StateManager sm) {

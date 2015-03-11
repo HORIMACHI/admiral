@@ -59,7 +59,7 @@ public interface State {
                 return true;
             }
             System.out.println(Bokou.getInstance());
-            boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "" + PATH_SYMBOL + "HHKNK_common" + PATH_SYMBOL + "bokou" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+            boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH  + "HHKNK_common" + PATH_SYMBOL + "bokou" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
             if(matcher) {
                 Click.getInstance().mouseMove(ImageMatcher.getInstance().MatchX(), ImageMatcher.getInstance().MatchY());
                 Click.getInstance().mouseClick();
@@ -67,6 +67,7 @@ public interface State {
                 mousePositionAdjuster(context.getState());
                 return true;
             }else {
+                transitionBokou(context, state);
                 System.out.println("sippai");
                 return false;
             }

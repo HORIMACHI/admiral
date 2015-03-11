@@ -7,8 +7,8 @@ public final class Constants {
     private Constants(){}
     // プロジェクトのファイルパス:定数
     public static final String P_FILEPATH = new File(".").getAbsoluteFile().getParent();
-//Windows PATH
-//    public static final String RSRC_FILEPATH = new File(".").getAbsoluteFile().getParent() + "\\src\\main\\resources\\img\\";
+    //Windows PATH
+    //public static final String RSRC_FILEPATH = new File(".").getAbsoluteFile().getParent() + "\\src\\main\\resources\\img\\";
     //Linux PATH
     public static final String RSRC_FILEPATH = new File(".").getAbsoluteFile().getParent() + "/src/main/resources/img/";
     public static final String PATH_SYMBOL = "/";
