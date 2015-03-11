@@ -25,7 +25,7 @@ public class Click {
         mouseClick_();
         TimerUtil.getInstance().sleep(50);//0.05s待つ
         mouseRelease_();
-        TimerUtil.getInstance().sleep(3000);//0.05s待つ
+        TimerUtil.getInstance().sleep(4000);//4s待つ
     }
     /*押して離す動作*/
     public void mouseClick(int delay) {

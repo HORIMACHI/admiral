@@ -65,7 +65,7 @@ public class Ensei implements Task{
                                 clk.mouseMove(img.MatchX(), img.MatchY());
                                 clk.mouseClick();
                                 clk.mouseMove(0, 0);
-                                TimerUtil.getInstance().sleep(5000);//成功したら5秒待つ
+                                TimerUtil.getInstance().sleep(10000);//成功したら10秒待つ
                                 //サブメニュー閉じさせる
                                 if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "e_cancel" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
                                     clk.mouseMove(img.MatchX(), img.MatchY());
