@@ -44,8 +44,10 @@ public class Ensei implements Task{
             clk.mouseClick();
             clk.mouseMove(0, 0);
             for (int i = 0; i < 3; i++) {
+                System.out.println("id選択");
                 //遠征のID選択
                 if (img.compareImg(new File(RSRC_FILEPATH + "ensei" + PATH_SYMBOL + "eid" + String.valueOf(ids[i]) + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                    System.out.println(String.valueOf(ids[i]) + ": マッチ!");
                     clk.mouseMove(img.MatchX(), img.MatchY());
                     clk.mouseClick();
                     clk.mouseMove(0, 0);
