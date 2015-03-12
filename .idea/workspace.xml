@@ -86,15 +86,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eid5.png" pinned="false" current-in-tab="false">
+      <file leaf-file-name="eid5.png" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/img/ensei/eid5.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eid6.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/img/ensei/eid6.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -1095,17 +1088,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/img/ensei/eid5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/img/ensei/eid2.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/img/ensei/eid6.png">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/img/ensei/eid5.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
