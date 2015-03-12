@@ -4,7 +4,7 @@
 		module="kankore_sbt-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150309200645"
+		publication="20150312133630"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

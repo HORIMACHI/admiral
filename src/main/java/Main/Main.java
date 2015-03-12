@@ -36,6 +36,9 @@ public class Main {
     /* 第二:2,第三:5,第四:6*/
     public static void main(String[] args) {
         init();
+        boolean test_eid6 = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "ensei/eid6.png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
+        System.out.println(test_eid6);
+
         //編成画面がどこにあるか調べる
         boolean hensei = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
         System.out.println(hensei);
