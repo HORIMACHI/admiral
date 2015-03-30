@@ -49,9 +49,6 @@ public class Hokyu implements Task{
         context.transitionBokou(context.getState());
         end();
     }
-    public void execute(Context context,int id,int id2,int id3) {
-        System.out.println("No Method");
-    }
 
         private void Kantai(ImageMatcher img, Click clk, Robot robo, Display disp, int i) {
         if (img.compareImg(new File(RSRC_FILEPATH + "hokyu" + PATH_SYMBOL + "k" + String.valueOf(i + 1) + "_e" + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
@@ -77,4 +74,9 @@ public class Hokyu implements Task{
         }
         return false;
     }
+    @Override
+    public int getPriority() {
+        return 10;
+    }
+
 }

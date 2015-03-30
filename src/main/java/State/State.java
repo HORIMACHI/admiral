@@ -58,6 +58,10 @@ public interface State {
                 mousePositionAdjuster(state);
                 return true;
             }
+            if (ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()))) {
+                mousePositionAdjuster(state);
+                return true;
+            }
             System.out.println(Bokou.getInstance());
             boolean matcher = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH  + "HHKNK_common" + PATH_SYMBOL + "bokou" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
             if(matcher) {

@@ -8,7 +8,9 @@ import State.Context;
 import State.StateManager;
 import Task.Task;
 import Task.TaskQueue;
+import Task.Kaitai;
 import Task.Ensei;
+import Task.Syutsugeki;
 import Controll.TimerUtil;
 import java.io.File;
 import java.util.LinkedList;
@@ -24,6 +26,7 @@ import static Constant.Constants.PATH_SYMBOL;
  */
 public class Main {
     private static final int[] e_id = {5,21,38};
+    private static int timerCounter = 0;
     //メインを始める前の初期化処理
     private static void init() {
         System.out.println(P_FILEPATH);
@@ -44,6 +47,10 @@ public class Main {
         StateManager sm = new StateManager();
         sm.transitionBokou(sm.getState());
 
+        //testcode
+//        TaskQueue.queue.add(0,new Syutsugeki());
+        TaskQueue.queue.add(0,new Kaitai());
+
         //ぐるぐる動かす
         while(true) {
             //画面遷移して遠征が帰ってきたかどうかを確認する
@@ -54,9 +61,16 @@ public class Main {
             }else {
                 sm.transitionBokou(sm.getState());
             }
+            //taskqueueのsort
+            TaskQueue.sort();
             //taskの実行
             queueExecuter(sm);
             TimerUtil.getInstance().sleep(ONE_MINUTES);//1分
+            if(timerCounter % 5==0) {
+                TaskQueue.queue.addLast(new Syutsugeki());
+                timerCounter=0;
+            }
+            timerCounter++;
         }
     }
     static void queueExecuter(StateManager sm) {
@@ -64,15 +78,10 @@ public class Main {
             System.out.println("TaskQueueがNULLじゃない!");
             while (TaskQueue.queue.size() != 0) {
                 System.out.println("実行");
-                for(int i=0;i < TaskQueue.queue.size();i++) {
-                    //補給タスクを実行
-                    if(TaskQueue.queue.get(i) instanceof Hokyu)
-                        TaskQueue.queue.get(i).execute(sm);
+                for(int i=0;i<TaskQueue.queue.size();i++) {
+                    TaskQueue.queue.get(i).execute(sm);
+                    TaskQueue.sort();
                 }
-                //補給タスク終了後に遠征が戻ってきたらやり直す.
-                for(int i=0;i<TaskQueue.queue.size();i++) if(TaskQueue.queue.get(i) instanceof Hokyu) queueExecuter(sm);
-                //遠征タスク id選択
-                if(TaskQueue.queue.size()!=0) TaskQueue.queue.get(0).execute(sm);
             }
             sm.transitionBokou(sm.getState());
         }
