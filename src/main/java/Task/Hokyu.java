@@ -49,7 +49,11 @@ public class Hokyu implements Task{
         context.transitionBokou(context.getState());
         end();
     }
-    private void Kantai(ImageMatcher img, Click clk, Robot robo, Display disp, int i) {
+    public void execute(Context context,int id,int id2,int id3) {
+        System.out.println("No Method");
+    }
+
+        private void Kantai(ImageMatcher img, Click clk, Robot robo, Display disp, int i) {
         if (img.compareImg(new File(RSRC_FILEPATH + "hokyu" + PATH_SYMBOL + "k" + String.valueOf(i + 1) + "_e" + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
                 img.compareImg(new File(RSRC_FILEPATH + "hokyu" + PATH_SYMBOL + "k" + String.valueOf(i + 1) + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
             clk.mouseMove(img.MatchX(), img.MatchY());

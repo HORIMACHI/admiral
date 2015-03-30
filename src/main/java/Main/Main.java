@@ -23,6 +23,7 @@ import static Constant.Constants.PATH_SYMBOL;
  * Created by hiroto on 2015/02/22.
  */
 public class Main {
+    private static final int[] e_id = {5,21,38};
     //メインを始める前の初期化処理
     private static void init() {
         System.out.println(P_FILEPATH);
@@ -36,14 +37,13 @@ public class Main {
     /* 第二:2,第三:5,第四:6*/
     public static void main(String[] args) {
         init();
-//        boolean test_eid6 = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "ensei/eid6.png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
-//        System.out.println(test_eid6);
 
         //編成画面がどこにあるか調べる
         boolean hensei = ImageMatcher.getInstance().compareImg(new File(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "hensei" + ".png"), Controller.getInstance().createScreenCapture(Display.getInstance().getDesktop()));
         System.out.println(hensei);
         StateManager sm = new StateManager();
         sm.transitionBokou(sm.getState());
+
         //ぐるぐる動かす
         while(true) {
             //画面遷移して遠征が帰ってきたかどうかを確認する
@@ -71,7 +71,7 @@ public class Main {
                 }
                 //補給タスク終了後に遠征が戻ってきたらやり直す.
                 for(int i=0;i<TaskQueue.queue.size();i++) if(TaskQueue.queue.get(i) instanceof Hokyu) queueExecuter(sm);
-                //遠征タスク
+                //遠征タスク id選択
                 if(TaskQueue.queue.size()!=0) TaskQueue.queue.get(0).execute(sm);
             }
             sm.transitionBokou(sm.getState());
