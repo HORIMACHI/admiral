@@ -73,6 +73,7 @@ public class Syutsugeki implements Task{
             if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tettai" + ".png"), robo.createScreenCapture(disp.getDesktop())))
                 break;
             else {
+                clk.mouseMove(ImageMatcher.getInstance().get_B_AdjustX(), ImageMatcher.getInstance().get_B_AdjustY());
                 clk.mouseClick();
                 TimerUtil.getInstance().sleep(1000);
                 System.out.println("クリック");
