@@ -47,6 +47,10 @@ public class Main {
         StateManager sm = new StateManager();
         sm.transitionBokou(sm.getState());
 
+        //補給と遠征をいれる
+        TaskQueue.queue.addFirst(new Hokyu());
+        TaskQueue.queue.addLast(new Ensei());
+
         //ぐるぐる動かす
         while(true) {
             //画面遷移して遠征が帰ってきたかどうかを確認する
