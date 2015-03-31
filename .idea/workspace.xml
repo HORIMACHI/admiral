@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e489cf6b-26cf-42fa-b8e2-abd27616c30c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Task/Ensei.java" afterPath="$PROJECT_DIR$/src/main/java/Task/Ensei.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kankore_sbt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Ensei.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Ensei.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Task/Ensei.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3519">
-              <caret line="188" column="31" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.29382715" vertical-offset="1870" max-vertical-offset="3536">
+              <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,7 +84,7 @@
       <file leaf-file-name="Syutsugeki.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Task/Syutsugeki.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1955">
+            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1955">
               <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -92,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41975307" vertical-offset="663" max-vertical-offset="1530">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1530">
+              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,7 +118,7 @@
       <file leaf-file-name="Kaiso.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/State/Kaiso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1054">
               <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
@@ -145,13 +146,13 @@
         <option value="$PROJECT_DIR$/src/main/java/Controll/Click.java" />
         <option value="$PROJECT_DIR$/src/main/java/Task/Hokyu.java" />
         <option value="$PROJECT_DIR$/src/main/java/Task/Kaitai.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Task/Ensei.java" />
         <option value="$PROJECT_DIR$/src/main/java/Task/Task.java" />
         <option value="$PROJECT_DIR$/src/main/java/Task/TaskComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/State/State.java" />
         <option value="$PROJECT_DIR$/src/main/java/Task/TaskQueue.java" />
         <option value="$PROJECT_DIR$/src/main/java/Task/Syutsugeki.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Task/Ensei.java" />
       </list>
     </option>
   </component>
@@ -184,6 +185,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,8 +365,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -705,6 +706,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/State/Kaiso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1054">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/img/ensei/id9_16.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -996,20 +1005,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Task/Ensei.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3519">
-          <caret line="188" column="31" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1530">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Task/Ensei.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41975307" vertical-offset="663" max-vertical-offset="1530">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29382715" vertical-offset="1870" max-vertical-offset="3536">
+          <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
