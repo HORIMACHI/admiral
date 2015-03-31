@@ -52,6 +52,12 @@ public class Syutsugeki implements Task{
         System.out.println("1-1を押す");
         //決定ボタンを押す
         while(!img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "s_kettei" + ".png"), robo.createScreenCapture(disp.getDesktop())));
+            //kaitaiflagの画像が見えたら,解体タスクをキューに入れる.
+            if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "kaitaiflag" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                TaskQueue.queue.addLast(new Kaitai());
+                System.out.println("解体フラグON");
+            }
+            img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "s_kettei" + ".png"), robo.createScreenCapture(disp.getDesktop()));
             clk.mouseMove(img.MatchX(), img.MatchY());
             clk.mouseClick();
             clk.mouseMove(0, 0);
@@ -59,10 +65,6 @@ public class Syutsugeki implements Task{
         //1_1への出撃ボタンを押す
         TimerUtil.getInstance().sleep(1000);
 
-        //kaitaiflagの画像が見えたら,解体タスクをキューに入れる.
-        if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "kaitaiflag" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
-            TaskQueue.queue.addLast(new Kaitai());
-        }
 
         while(!img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "s_syutsugeki" + ".png"), robo.createScreenCapture(disp.getDesktop())));
             clk.mouseMove(img.MatchX(), img.MatchY());

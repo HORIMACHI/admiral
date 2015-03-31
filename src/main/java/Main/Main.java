@@ -47,6 +47,9 @@ public class Main {
         StateManager sm = new StateManager();
         sm.transitionBokou(sm.getState());
 
+        //test code
+        TaskQueue.queue.addFirst(new Syutsugeki());
+
         //ぐるぐる動かす
         while(true) {
             //画面遷移して遠征が帰ってきたかどうかを確認する
@@ -74,10 +77,8 @@ public class Main {
             System.out.println("TaskQueueがNULLじゃない!");
             while (TaskQueue.queue.size() != 0) {
                 System.out.println("実行");
-                for(int i=0;i<TaskQueue.queue.size();i++) {
-                    TaskQueue.queue.get(i).execute(sm);
-                    TaskQueue.sort();
-                }
+                TaskQueue.queue.get(0).execute(sm);
+                TaskQueue.sort();
             }
             sm.transitionBokou(sm.getState());
         }

@@ -11,6 +11,7 @@ public final class TaskQueue {
     }
     private TaskQueue(){};
     public static void sort() {
+        if(queue.size() == 0) return;
         for (int j = 0; j < queue.size(); j++) {
             for (int i = 0; i < queue.size() - 1; i++) {
                 if (queue.get(i).getPriority() < queue.get(i + 1).getPriority()) {
