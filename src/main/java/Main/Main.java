@@ -47,9 +47,6 @@ public class Main {
         StateManager sm = new StateManager();
         sm.transitionBokou(sm.getState());
 
-        //test code
-        TaskQueue.queue.addFirst(new Syutsugeki());
-
         //ぐるぐる動かす
         while(true) {
             //画面遷移して遠征が帰ってきたかどうかを確認する
