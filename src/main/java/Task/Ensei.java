@@ -100,7 +100,7 @@ public class Ensei implements Task{
     @Override
     public void execute(Context context) {
         //遠征id配列を生成
-        final int[] ids = {5,21,38}; //id 海上護衛,北方鼠,東京急行(弐)
+        final int[] ids = {2,21,38}; //id 長距離,北方鼠,東京急行(弐)
 
         // 母港画面まで移動させる
         if(!context.getState().equals(Bokou.getInstance()))
