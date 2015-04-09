@@ -66,11 +66,11 @@ public class Main {
             //taskの実行
             queueExecuter(sm);
             TimerUtil.getInstance().sleep(ONE_MINUTES);//1分
-//            if(timerCounter % 5==0) {
-//                TaskQueue.queue.addLast(new Syutsugeki());
-//                timerCounter=0;
-//            }
-//            timerCounter++;
+            if(timerCounter % 5==0) {
+                TaskQueue.queue.addLast(new Syutsugeki());
+                timerCounter=0;
+            }
+            timerCounter++;
         }
     }
     static void queueExecuter(StateManager sm) {

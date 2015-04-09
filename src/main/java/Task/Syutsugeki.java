@@ -36,6 +36,8 @@ public class Syutsugeki implements Task{
 
         System.out.println("母港→出撃ボタン押す");
         System.out.println(RSRC_FILEPATH + "bokou" + PATH_SYMBOL + "syutsugeki" + ".png");
+
+        clk.mouseMove(0, 0);
         //出撃
         while(true) {
             if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "syutsugeki" + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
