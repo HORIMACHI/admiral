@@ -39,9 +39,13 @@ public class Syutsugeki implements Task{
 
         clk.mouseMove(0, 0);
         //出撃
+        if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "syutsugeki_adjust" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+            clk.mouseMove(img.MatchX(), img.MatchY());
+            clk.mouseClick();
+        }
         while(true) {
             if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "syutsugeki" + ".png"), robo.createScreenCapture(disp.getDesktop())) ||
-                    img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "syutsugeki" + ".png"), robo.createScreenCapture(disp.getDesktop())) )
+                    img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "syutsugeki_e" + ".png"), robo.createScreenCapture(disp.getDesktop())) )
                 break;
         }
             clk.mouseMove(img.MatchX(), img.MatchY());
@@ -71,7 +75,10 @@ public class Syutsugeki implements Task{
         //1_1への出撃ボタンを押す
         TimerUtil.getInstance().sleep(1000);
 
-
+        if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "s_syutsugeki_adjust" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+            clk.mouseMove(img.MatchX(), img.MatchY());
+            clk.mouseClick();
+        }
         while(!img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "s_syutsugeki" + ".png"), robo.createScreenCapture(disp.getDesktop())));
             clk.mouseMove(img.MatchX(), img.MatchY());
             clk.mouseClick();
