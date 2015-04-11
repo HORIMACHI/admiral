@@ -55,7 +55,7 @@ public class Main {
         while(true) {
             //画面遷移して遠征が帰ってきたかどうかを確認する
             //母港じゃなければ母港に移動
-            if(sm.getState().getClass().getSimpleName().equals("bokou")) {
+            if(sm.getState().getClass().getSimpleName().equals("Bokou")) {
                 sm.transition(sm.getState(), "hensei");
                 sm.transitionBokou(sm.getState());
             }else {

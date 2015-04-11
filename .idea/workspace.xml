@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e489cf6b-26cf-42fa-b8e2-abd27616c30c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kankore_sbt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,8 +105,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5135135" vertical-offset="896" max-vertical-offset="1598">
-              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.91646194" vertical-offset="1089" max-vertical-offset="1598">
+              <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,7 +204,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -412,7 +413,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1065,8 +1066,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5135135" vertical-offset="896" max-vertical-offset="1598">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.91646194" vertical-offset="1089" max-vertical-offset="1598">
+          <caret line="86" column="55" selection-start-line="86" selection-start-column="55" selection-end-line="86" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
