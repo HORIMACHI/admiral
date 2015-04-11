@@ -48,7 +48,7 @@ public class Main {
         sm.transitionBokou(sm.getState());
 
         //補給と遠征をいれる
-        TaskQueue.queue.addFirst(new Hokyu());
+//        TaskQueue.queue.addFirst(new Hokyu());
         TaskQueue.queue.addLast(new Ensei());
 
         //ぐるぐる動かす
