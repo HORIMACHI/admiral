@@ -33,6 +33,7 @@ public class Click {
         TimerUtil.getInstance().sleep(50);//0.05s待つ
         mouseRelease_();
         TimerUtil.getInstance().sleep(delay);//0.05s待つ
+        mouseMove(0,0);
     }
     /* Helperメソッド*/
     private void mouseClick_() {
