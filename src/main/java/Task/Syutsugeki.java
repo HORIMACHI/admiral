@@ -84,9 +84,21 @@ public class Syutsugeki implements Task{
             clk.mouseClick();
         System.out.println("出撃");
         //追撃せず
-        while(!img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tsuigeki" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
-            if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tettai" + ".png"), robo.createScreenCapture(disp.getDesktop())))
+        while(true) {
+            if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tsuigeki" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                while(!img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tsuigeki" + ".png"), robo.createScreenCapture(disp.getDesktop())));
+                clk.mouseMove(img.MatchX(), img.MatchY());
+                clk.mouseClick();
+                clk.mouseMove(0, 0);
                 break;
+            }
+            else if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tettai" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
+                while(!img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tettai" + ".png"), robo.createScreenCapture(disp.getDesktop())));
+                clk.mouseMove(img.MatchX(), img.MatchY());
+                clk.mouseClick();
+                clk.mouseMove(0, 0);
+                break;
+            }
             else {
                 clk.mouseMove(ImageMatcher.getInstance().get_B_AdjustX(), ImageMatcher.getInstance().get_B_AdjustY());
                 clk.mouseClick();
@@ -95,17 +107,7 @@ public class Syutsugeki implements Task{
                 continue;
             }
         }
-        if(img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tsuigeki" + ".png"), robo.createScreenCapture(disp.getDesktop()))) {
-            clk.mouseMove(img.MatchX(), img.MatchY());
-            clk.mouseClick();
-            clk.mouseMove(0, 0);
-        }
         System.out.println("追撃せずor撤退");
-        //撤退ボタンを押す
-        while(!img.compareImg(new File(RSRC_FILEPATH + "syutsugeki" + PATH_SYMBOL + "tettai" + ".png"), robo.createScreenCapture(disp.getDesktop())));
-            clk.mouseMove(img.MatchX(), img.MatchY());
-            clk.mouseClick();
-            clk.mouseMove(0, 0);
 
         //補給タスクを生成
         TaskQueue.queue.addLast(new Hokyu());
