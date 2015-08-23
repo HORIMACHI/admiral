@@ -1,6 +1,0 @@
-[info] Running Main.Main 
-[debug] Waiting for threads to exit or System.exit to be called.
-[debug]   Classpath:
-[debug] 	C:\Users\hiroto\IdeaProjects\kankore_sbt\target\scala-2.11\classes
-[debug] 	C:\Users\hiroto\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
-[debug] Waiting for thread run-main-0 to terminate.
